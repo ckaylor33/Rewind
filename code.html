@@ -33,9 +33,9 @@
     <!-- Nav Section -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><i class="fas fa-code d-inline-block align-text-center"></i> APP
-          NAME</a
+        <a class="navbar-brand logoFont" href="index.html"
+          ><i class="fas fa-code d-inline-block align-text-center"></i>
+          REWIND</a
         >
         <button
           class="navbar-toggler"
@@ -62,7 +62,12 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="#">Git Repo</a>
+              <a
+                class="nav-link"
+                target="_blank"
+                href="https://github.com/ckaylor33/Rewind"
+                >Git Repo</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" target="_blank" href="#">About</a>
@@ -74,24 +79,76 @@
     <!-- Main Section -->
     <main class="flex-shrink-0">
       <div class="container py-5 px-5 mt-5">
-        <h2 class="border-1 border-bottom border-dark">
-          The Code for APP NAME.
-        </h2>
+        <h2 class="border-1 border-bottom border-dark">The Code for REWIND.</h2>
         <div class="row row-cols-1 row-cols-lg-2">
           <div class="col-lg-8">
             <pre class="line-numbers"><code class="language-javascript">
-              //Call Hello World
-              function HelloWorld() {
-                alert('Hello World!')
-              }
+              //Get the string/value from the page
+//Controller function
+function getString() {
+  document.getElementById('alert').classList.add('invisible')
+
+  let userString = document.getElementById('userString').value
+
+  let revString = reverseString(userString)
+
+  displayString(revString)
+}
+
+//Reverse the string
+//Logic function
+function reverseString(userString) {
+  let revString = []
+
+  //reverse a string using a decrementing for loop
+  for (let index = userString.length - 1; index >= 0; index--) {
+    //add to revString on every iteration
+    revString += userString[index]
+  }
+
+  //give back to getString
+  return revString
+}
+
+//Display the message with the reversed string to the user
+//View function
+function displayString(revString) {
+  //write to the page
+  document.getElementById(
+    'userMessage'
+  ).innerHTML = `Your string reversed is: ${revString}`
+  //show the alert box
+  document.getElementById('alert').classList.remove('invisible')
+}
+
             </code></pre>
           </div>
           <div class="col-lg-4">
-            <p>The code is structured in one function.</p>
-            <h5>Hello World</h5>
+            <p>The code is structured in three functions.</p>
+            <h5>Get String</h5>
             <p>
-              Hello world is a function that displays an alert with a message of
-              "Hello World"
+              The getString function is used as my controller function, getting
+              the user inputted value from the document/HTML and handing that to
+              the reverseString function via parameters. The reversed string is
+              then returned to it inside an array and handed off to the
+              displayString function by calling with the revString parameter.
+            </p>
+            <h5>Reverse String</h5>
+            <p>
+              The reverseString function is my logic function, getting the users
+              inputted string from getString and using a decrementing for loop
+              to reverse that string. The index (a single character in the
+              string) is added to an empty array upon every iteration. The array
+              (revString) then returns the now complete reversed string back to
+              getString.
+            </p>
+            <h5>Display String</h5>
+            <p>
+              My final function gets handed the revString array and uses this to
+              to display the correct reversed string to the user. A template
+              literal is used to add the message to the correct place in the
+              document and an invisible class is removed from the alert box to
+              finally display the final message.
             </p>
           </div>
         </div>

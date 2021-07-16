@@ -31,9 +31,8 @@
     <!-- Nav Section -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><i class="fas fa-code d-inline-block align-text-center"></i> APP
-          NAME</a
+        <a class="navbar-brand logoFont" href="index.html"
+          ><i class="fas fa-code d-inline-block align-text-center"></i> REWIND</a
         >
         <button
           class="navbar-toggler"
@@ -60,7 +59,7 @@
               <a class="nav-link" href="code.html">The Code</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" target="_blank" href="#">Git Repo</a>
+              <a class="nav-link" target="_blank" href="https://github.com/ckaylor33/Rewind">Git Repo</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" target="_blank" href="#">About</a>
@@ -72,7 +71,34 @@
 
     <!-- Main Section -->
     <main class="flex-shrink-0">
-      <div class="container"></div>
+      <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+          <div class="col mb-4">
+            <h1 class="lh-1 fw-bold mb-3 display-5">REWIND: A Coding Project</h1>
+            <h4 class="lead">There and back again. A javascript coding exercise using arrays. Write a program that displays a string in reverse.</h4>
+          </div>
+          <div class="col">
+            <h5 class="border-bottom enterStringBorder">Enter A String To Reverse</h5>
+            <form action="" class="row gx-3 gy-2">
+              <div class="col">
+                <input id="userString" type="text" placeholder="Enter A String" class="form-control " aria-label="Enter a string" value="text">
+              </div>
+              <div class="py-2 col-12">
+                <button type="button" id="btnSubmit" class="btn btn-dark buttonSubmit">Reverse Me</button>
+              </div>
+              
+              <div class="alert alert-success mt-5 invisible fade show" id="alert" role="Alert">
+                <h4 class="alert-heading">Well Done!</h4>
+                <hr>
+                <p class="mb-0" id="userMessage">
+                  <!--Your success/error message goes here!-->
+                </p>
+              </div>
+            </form>
+           
+          </div>
+        </div>
+      </div>
     </main>
     <!-- Footer Section -->
     <footer class="footer mt-auto py-1">
@@ -148,5 +174,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/site.js"></script>
+    <script>
+      document.getElementById("btnSubmit").addEventListener("click", getString)
+    </script>
   </body>
 </html>
