@@ -1,181 +1,146 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
-  <head>
-    <title>Rewind: A Coding Project By Charlie Kaylor</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+<head>
+  <title>Rewind: A Coding Project By Charlie Kaylor</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <script
-      src="https://kit.fontawesome.com/5db21ba9c6.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="/css/site.css" />
+  <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
 
-    <link rel="icon" href="img/favicon (1).ico" />
-  </head>
+  <link rel="stylesheet" href="/css/site.css" />
 
-  <body class="d-flex flex-column h-100">
-    <!-- Nav Section -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand logoFont" href="index.html"
-          ><i class="fas fa-code d-inline-block align-text-center"></i> REWIND</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page"" href="app.html">The App</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="code.html">The Code</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://github.com/ckaylor33/Rewind">Git Repo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="#">About</a>
-            </li>
-          </ul>
+  <link rel="icon" href="img/favicon (1).ico" />
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!-- Nav Section -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand logoFont" href="index.html"><i class="fas fa-code d-inline-block align-text-center"></i>
+        REWIND</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page"" href=" app.html">The App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="code.html">The Code</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/ckaylor33/Rewind">Git Repo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="flex-shrink-0">
+    <div class="container mt-5">
+      <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col mb-4">
+          <h1 class="lh-1 fw-bold mb-3 display-5">REWIND: A Coding Project</h1>
+          <h4 class="lead">There and back again. A javascript coding exercise using arrays. Write a program that
+            displays a string in reverse.</h4>
+        </div>
+        <div class="col">
+          <h5 class="border-bottom enterStringBorder">Enter A String To Reverse</h5>
+          <form action="" class="row gx-3 gy-2">
+            <div class="col">
+              <input id="userString" type="text" placeholder="Enter A String" class="form-control "
+                aria-label="Enter a string" value="text">
+            </div>
+            <div class="py-2 col-12">
+              <button type="button" id="btnSubmit" class="btn btn-dark buttonSubmit">Reverse Me</button>
+            </div>
+
+            <div class="alert alert-success mt-5 invisible fade show" id="alert" role="Alert">
+              <h4 class="alert-heading">Well Done!</h4>
+              <hr>
+              <p class="mb-0" id="userMessage">
+                <!--Your success/error message goes here!-->
+              </p>
+            </div>
+          </form>
+
         </div>
       </div>
-    </nav>
-
-    <!-- Main Section -->
-    <main class="flex-shrink-0">
-      <div class="container mt-5">
-        <div class="row row-cols-1 row-cols-lg-2">
-          <div class="col mb-4">
-            <h1 class="lh-1 fw-bold mb-3 display-5">REWIND: A Coding Project</h1>
-            <h4 class="lead">There and back again. A javascript coding exercise using arrays. Write a program that displays a string in reverse.</h4>
-          </div>
-          <div class="col">
-            <h5 class="border-bottom enterStringBorder">Enter A String To Reverse</h5>
-            <form action="" class="row gx-3 gy-2">
-              <div class="col">
-                <input id="userString" type="text" placeholder="Enter A String" class="form-control " aria-label="Enter a string" value="text">
-              </div>
-              <div class="py-2 col-12">
-                <button type="button" id="btnSubmit" class="btn btn-dark buttonSubmit">Reverse Me</button>
-              </div>
-              
-              <div class="alert alert-success mt-5 invisible fade show" id="alert" role="Alert">
-                <h4 class="alert-heading">Well Done!</h4>
-                <hr>
-                <p class="mb-0" id="userMessage">
-                  <!--Your success/error message goes here!-->
-                </p>
-              </div>
-            </form>
-           
-          </div>
-        </div>
-      </div>
-    </main>
-    <!-- Footer Section -->
-    <footer class="footer mt-auto py-1">
-      <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-lg-3 gy-2">
-          <div
-            class="
+    </div>
+  </main>
+  <!-- Footer Section -->
+  <footer class="footer mt-auto py-1">
+    <div class="container-fluid">
+      <div class="row row-cols-1 row-cols-lg-3 gy-2">
+        <div class="
               col
               order-last order-lg-first
               text-light
               d-flex
               align-items-center
-            "
-          >
-            <div>
-              <span class="text-muted">&copy;2021</span> Charlie Kaylor |
-              charliekaylor@hotmail.com
-            </div>
+            ">
+          <div>
+            <span class="text-muted">&copy;2022</span> Charlie Kaylor |
+            charliekaylor@hotmail.com
           </div>
-          <div
-            class="
+        </div>
+        <div class="
               col
               d-flex
               align-items-center
               justify-content-start justify-content-lg-center
-            "
-          >
-            <img
-              src="img/White logo - no background.svg"
-              alt="Charlie Kaylor Logo"
-              height="59"
-            />
-          </div>
-          <div
-            class="
+            ">
+          <img src="img/White logo - no background.svg" alt="Charlie Kaylor Logo" height="59" />
+        </div>
+        <div class="
               col
               d-flex
               align-items-center
               justify-content-start justify-content-lg-end
-            "
-          >
-            <div class="row">
-              <div class="col social">
-                <a href="#" target="_blank"
-                  ><i class="fab fa-linkedin fa-2x"></i
-                ></a>
-              </div>
-              <div class="col social">
-                <a href="#" target="_blank"
-                  ><i class="fab fa-github fa-2x"></i
-                ></a>
-              </div>
-              <div class="col social">
-                <a href="#" target="_blank"
-                  ><i class="fab fa-twitter fa-2x"></i
-                ></a>
-              </div>
+            ">
+          <div class="row">
+            <div class="col social">
+              <a href="https://www.linkedin.com/in/charlie-kaylor-2223951b3/" target="_blank"><i
+                  class="fab fa-linkedin fa-2x"></i></a>
+            </div>
+            <div class="col social">
+              <a href="https://github.com/ckaylor33" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+            <div class="col social">
+              <a href="https://twitter.com/charlie_kaylor" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/site.js"></script>
-    <script>
-      document.getElementById("btnSubmit").addEventListener("click", getString)
-    </script>
-  </body>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+  </script>
+  <script src="js/site.js"></script>
+  <script>
+    document.getElementById("btnSubmit").addEventListener("click", getString)
+  </script>
+</body>
+
 </html>
